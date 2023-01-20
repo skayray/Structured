@@ -108,4 +108,7 @@ h1 {}
 @media (max-width: 575.98px) {.allow-sidebar{    max-width: 100% }}
 
 
+@media print{
+	#site-navigation{display:none;}
+}
 
