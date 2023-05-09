@@ -54,21 +54,17 @@ Main theme real styles
 
 /*fa uscire la sezione mortandola a tutta pagina*/
 @media (min-width: 576px){
-/*.section-full, .elementor-section-full_width{    width: 100vw; max-width:var(--max-width);     margin-left:calc((-100vw + 576px + -58px ) /2 );}*/
 .container, .container-md, .container-sm{max-width:95vw;}
 }
 
 @media (min-width: 768px){
-/*.section-full, .elementor-section-full_width{    width: 100vw; max-width:var(--max-width);     margin-left:calc((-100vw  + 720px + -20px ) /2 );}*/
 .container, .container-md, .container-sm{max-width:90vw;}
 }
 
 @media (min-width: 992px){
 	
-/*.section-full, .elementor-section-full_width{    width: 100vw; max-width:var(--max-width);     margin-left:calc((-100vw  + 960px + -20px ) /2 );}*/
 }
 @media (min-width: 1200px){
-/*.section-full, .elementor-section-full_width{    width: 100vw; max-width:var(--max-width);     margin-left:calc((-100vw + (100vw - var(--max-width))  + 1140px + -20px ) /2 );}*/
 }
 
 
@@ -84,6 +80,8 @@ Main theme real styles
 /*Page*/
 
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {    transition: all 0.5s ease-in-out;}
+
+#page.page-full, .container-full {max-width:100vw;}
 
 #page {min-height:85vh;max-width: var(--max-width); margin: auto  auto 4rem; background:#fff;}
 .allow-sidebar{    max-width: 70%;  min-width: 350px}
@@ -108,7 +106,4 @@ h1 {}
 @media (max-width: 575.98px) {.allow-sidebar{    max-width: 100% }}
 
 
-@media print{
-	#site-navigation{display:none;}
-}
 
