@@ -4,7 +4,6 @@
 </footer><!-- .entry-footer -->
 
 </article>
-</div>
 
 </div><!-- #CONTENT -->
 </div>	<!-- #PAGE -->

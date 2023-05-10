@@ -1,10 +1,11 @@
+
 <?php
 /*
 * Template Name: Full Width
 *
 */
 
- get_template_part( 'template-parts/_page-templates-fixed-elements' ); 
+ get_template_part( 'template-parts/_page-templates-fixed-elements',null,array('page_div_class'=> 'mt-0 page-full','content_div_class'=>'container-full') ); 
 ?>
 
 

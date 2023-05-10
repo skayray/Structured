@@ -14,13 +14,63 @@ Main theme real styles
   --max-width: 1300px;
 } 
 
+/*hamburger_ani*/
+
+.hamburger .line{
+  width: 30px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+#hamburger-9{
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.is-active #hamburger-9{
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.is-active #hamburger-9 .line{
+  width: 35px;
+}
+
+.is-active #hamburger-9 .line:nth-child(2){
+  opacity: 0;
+}
+
+.is-active #hamburger-9 .line:nth-child(1){
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.is-active #hamburger-9 .line:nth-child(3){
+  -webkit-transform: translateY(-11px) rotate(90deg);
+  -ms-transform: translateY(-11px) rotate(90deg);
+  -o-transform: translateY(-11px) rotate(90deg);
+  transform: translateY(-11px) rotate(90deg);
+}
+
+
 /*bootstrap mod*/
-.navbar-light .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-.navbar-dark .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
 
 .navbar-toggler {border:none; } 
 .custom-toggler{display: none;}
@@ -54,21 +104,17 @@ Main theme real styles
 
 /*fa uscire la sezione mortandola a tutta pagina*/
 @media (min-width: 576px){
-/*.section-full, .elementor-section-full_width{    width: 100vw; max-width:var(--max-width);     margin-left:calc((-100vw + 576px + -58px ) /2 );}*/
 .container, .container-md, .container-sm{max-width:95vw;}
 }
 
 @media (min-width: 768px){
-/*.section-full, .elementor-section-full_width{    width: 100vw; max-width:var(--max-width);     margin-left:calc((-100vw  + 720px + -20px ) /2 );}*/
 .container, .container-md, .container-sm{max-width:90vw;}
 }
 
 @media (min-width: 992px){
 	
-/*.section-full, .elementor-section-full_width{    width: 100vw; max-width:var(--max-width);     margin-left:calc((-100vw  + 960px + -20px ) /2 );}*/
 }
 @media (min-width: 1200px){
-/*.section-full, .elementor-section-full_width{    width: 100vw; max-width:var(--max-width);     margin-left:calc((-100vw + (100vw - var(--max-width))  + 1140px + -20px ) /2 );}*/
 }
 
 
@@ -84,6 +130,8 @@ Main theme real styles
 /*Page*/
 
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {    transition: all 0.5s ease-in-out;}
+
+#page.page-full, .container-full {max-width:100vw;}
 
 #page {min-height:85vh;max-width: var(--max-width); margin: auto  auto 4rem; background:#fff;}
 .allow-sidebar{    max-width: 70%;  min-width: 350px}
@@ -108,4 +156,18 @@ h1 {}
 @media (max-width: 575.98px) {.allow-sidebar{    max-width: 100% }}
 
 
-
+#toTop{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #42424263;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px 8px;
+    border-radius: 10px;
+    font-size: 18px;
+	}
