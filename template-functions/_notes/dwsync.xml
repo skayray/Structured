@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="duplicate-posts.php" server="ftp.btcongress.com/wp-content/" local="132894051105786631" remote="132890461800000000" Dst="1" />
-<file name="include-files.php" server="ftp.btcongress.com/wp-content/" local="132907880870170244" remote="132907880400000000" Dst="1" />
-<file name="menu-walker.php" server="ftp.btcongress.com/wp-content/" local="132894051106854314" remote="132890461800000000" Dst="1" />
-<file name="svg-support.php" server="ftp.btcongress.com/wp-content/" local="132894051107243591" remote="132890461800000000" Dst="1" />
-<file name="theme-customize-menu.php" server="ftp.btcongress.com/wp-content/" local="132894051107393073" remote="132890461800000000" Dst="1" />
-<file name="theme-options-menu.php" server="ftp.btcongress.com/wp-content/" local="132907989170515280" remote="132907989000000000" Dst="1" />
-<file name="disable_api.php" server="ftp.btcongress.com/wp-content/" local="132894106652459058" remote="132894106200000000" Dst="1" />
-<file name="custom-login.php" server="ftp.btcongress.com/wp-content/" local="132907124391834499" remote="132907124400000000" Dst="1" />
+<file name="duplicate-posts.php" server="ftp.btcongress.com/wp-content/" local="133281198060196592" remote="133173950400000000" Dst="2" />
+<file name="include-files.php" server="ftp.btcongress.com/wp-content/" local="133281198060525595" remote="133173950400000000" Dst="2" />
+<file name="menu-walker.php" server="ftp.btcongress.com/wp-content/" local="133281198061053961" remote="133173950400000000" Dst="2" />
+<file name="svg-support.php" server="ftp.btcongress.com/wp-content/" local="133281198061493371" remote="133173950400000000" Dst="2" />
+<file name="theme-customize-menu.php" server="ftp.btcongress.com/wp-content/" local="133281198061926751" remote="133173950400000000" Dst="2" />
+<file name="theme-options-menu.php" server="ftp.btcongress.com/wp-content/" local="133295030070802978" remote="133295029800000000" Dst="2" />
+<file name="disable_api.php" server="ftp.btcongress.com/wp-content/" local="133281198060344009" remote="133173950400000000" Dst="2" />
+<file name="custom-login.php" server="ftp.btcongress.com/wp-content/" local="133281198059377849" remote="133173950400000000" Dst="2" />
 <file name="custom-login.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133129203492898026" remote="132908220000000000" Dst="1" />
 <file name="disable_api.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133129203493277400" remote="132908220000000000" Dst="1" />
 <file name="duplicate-posts.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133129203493595157" remote="132908220000000000" Dst="1" />
@@ -18,4 +18,6 @@
 <file name="theme-options-menu.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133160067316989868" remote="133160067000000000" Dst="1" />
 <file name="disable-comments.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133129203493093979" remote="132908220000000000" Dst="1" />
 <file name="social-share-shortcode.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133173990232353178" remote="133173991200000000" Dst="1" />
+<file name="disable-comments.php" server="ftp.btcongress.com/wp-content/" local="133281198059527768" remote="133173950400000000" Dst="2" />
+<file name="social-share-shortcode.php" server="ftp.btcongress.com/wp-content/" local="133281198061274159" remote="133173955800000000" Dst="2" />
 </dwsync>

@@ -16,7 +16,11 @@
 				
 
 				<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="<?php _e($side); ?>collapse" data-bs-target="#<?php _e($side); ?>primary-menu-wrap" aria-controls="<?php _e($side); ?>primary-menu-wrap" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
+					<div class="hamburger" id="hamburger-9">
+					  <span class="line"></span>
+					  <span class="line"></span>
+					  <span class="line"></span>
+					</div>
 				</button>
 				<?php
 					wp_nav_menu( array(
@@ -32,4 +36,3 @@
 					) );
 				?>
 		</nav><!-- #site-navigation -->
-		

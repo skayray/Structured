@@ -38,7 +38,7 @@
 			),
 			Array(
 			'name'=>'Email',
-			'share_url'=>"mailto:?to=&amp;body=$post_title%20$post_url&amp;subject=$post_title",
+			'share_url'=>"mailto:?body=$post_title%20$post_url&amp;subject=$post_title",
 			'icon'=>'<i class="fas fa-envelope" ></i>',
 			'extra'=>'rel="nofollow noopener" target="_blank"',
 			),

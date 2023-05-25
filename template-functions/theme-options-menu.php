@@ -36,8 +36,79 @@ function display_structured_options() {
 <?php
 } // end structured_theme_display
  
- 
+//cookie banner 
 
+function structured_initialize_sect0() {
+ 
+	// If the theme options don't exist, create them.
+	if( false == get_option( 'structured-options' ) ) {  
+		add_option( 'structured-options' );
+	} // end if
+ 
+	// First, we register a section. This is necessary since all future options must belong to a 
+	add_settings_section(
+		'settings_section_zero',         // ID used to identify this section and with which to register options
+		'Cookie banner',                  // Title to be displayed on the administration page
+		'display_section_message0', // Callback used to render the description of the section
+		'structured-options'     // Page on which to add this section of options
+	);
+	 
+	// Next, we'll introduce the fields for toggling the visibility of content elements.
+	add_settings_field( 
+	'cookie_activate_input',                      // ID used to identify the field throughout the theme
+	'Activate Cookie banner control',                           // The label to the left of the option interface element
+	'render_cookie_activate_input',   // The name of the function responsible for rendering the option interface
+	'structured-options',    // The page on which this option will be displayed
+	'settings_section_zero'         // The name of the section to which this field belongs
+	);
+	add_settings_field( 
+		'cookie_page_slug_input',                      // ID used to identify the field throughout the theme
+		'Cookie policy page id',                           // The label to the left of the option interface element
+		'render_cookie_page_slug_input',   // The name of the function responsible for rendering the option interface
+		'structured-options',    // The page on which this option will be displayed
+		'settings_section_zero',         // The name of the section to which this field belongs
+		array(                              // The array of arguments to pass to the callback. In this case, just a description.
+			'insert the page slug of the cookie policy page'
+		)
+
+	);
+	
+	 
+	 
+	// Finally, we register the fields with WordPress
+	register_setting(
+		'structured-options',
+		'cookie_activate_input',
+		'render_cookie_page_slug_input'
+	);
+	 
+} // end structured_initialize_structured_initialize_sect4
+add_action('admin_init', 'structured_initialize_sect0');
+
+ 
+ function display_section_messag0() {
+	 echo '
+<p>Enable cookies</p>		 ';
+ } // end structured_general_options_callback
+   
+function render_cookie_activate_input($args) {
+	// First, we read the options collection
+	$options = get_option('structured-options');
+	$html .= '<input type="checkbox" id="cookie_activate_input" name="structured-options[cookie_activate_input]" value="1" '.  checked(1,  $options['cookie_activate_input'], false) .'>'; 	 
+	echo $html;
+} 
+
+   
+function render_cookie_page_slug_input($args) {
+	$options = get_option('structured-options');
+	if ($options['cookie_page_slug_input']==""){$options['cookie_page_slug_input']='cookies';}
+	$html = '<label for="cookie_page_slug_input"> '  . $args[0] . '</label><br>'; 	
+	$html .= '<input type="text" id="cookie_page_slug_input" name="structured-options[cookie_page_slug_input]" value="'. $options['cookie_page_slug_input'].'">'; 	 
+	echo $html;
+} 
+
+
+//OG:image
 function structured_initialize_sect1() {
  
 	// If the theme options don't exist, create them.
@@ -322,7 +393,7 @@ function structured_initialize_sect5() {
 	 
 	// Next, we'll introduce the fields for toggling the visibility of content elements.
 	add_settings_field( 
-	'matomo_activate_input',                      // ID used to identify the field throughout the theme
+	'metricool_activate_input',                      // ID used to identify the field throughout the theme
 	'Activate Metricool',                           // The label to the left of the option interface element
 	'render_metricool_activate_input',   // The name of the function responsible for rendering the option interface
 	'structured-options',    // The page on which this option will be displayed

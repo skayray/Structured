@@ -6,7 +6,7 @@
 	<header>
 		<?php get_template_part( 'menu' ); ?>
 	</header><!-- #masthead -->
-<div id="page" class="d-sm-flex mt-4">	
+<div id="page" class="d-sm-flex">	
 		
 <div id="content" class="container flex-fill <?php if ( is_active_sidebar('sidebar-1') ) _e('allow-sidebar') ?>" >
 <?php
