@@ -63,25 +63,29 @@ if(!isset($_COOKIE["allow_analytics_cookies"])) { ?>
     background: #110b1add;
     padding: 1rem;
     color: #fff;
-    font-size: .8rem;
-    font-family: arial;
+    font-size: .9rem;
+    font-family: arial;z-index:1000;
 		}	
 		#cookie_info a{color:#fff; text-decoration: underline;}
-		#cookies_body{max-width:960px; width:90%; margin:auto; display: grid;    grid-template-columns: 50% 1fr;   }	
-		#cookie_save{text-align:right;}
+		#cookies_body{max-width:960px; width:90%; margin:auto; align-items: center;display: flex;
+    justify-content: space-between; }	
+		#cookie_save{    display: flex;    gap: 0.5rem;       justify-content: end;  }
+		#cookie_save .btn{font-size:.9rem}
+		@media(max-width:575px){ #cookies_body{display:grid;  gap:1rem;} 	#cookie_save{justify-content:center;    display: flex;
+    gap: .5rem;}}
 	</style> 
 <div id="cookie_banner">
-<div id="cookies_body"><div id="cookie_info"><p class="m-0 p-0 ">This site uses cookies to offer you a better browsing experience. Find out more on <a href="<?php echo site_url();echo '/'.$cookie_slug;?>">how we use cookies.</a></p> 
+<div id="cookies_body"><div id="cookie_info"><p class="m-0 p-0 ">This site uses cookies to offer you a better browsing experience.<br>Find out more on <a href="<?php echo site_url();echo '/'.$cookie_slug;?>">how we use cookies.</a></p> 
 </div>
 	<div id="cookie_save">
-  <button  id="cookie-essential" class="border-0 ps-4 pe-4 btn text-white" type="button">Essential cookies only</button>
-  <button  id="cookie-accept" class="rounded-0 ps-4 pe-4 btn btn-light" type="button">Accept all cookies</button>
+  <button  id="cookie-essential" class="border-0  btn text-white" type="button">Essential cookies only</button>
+  <button  id="cookie-accept" class="rounded-0 btn btn-light" type="button">Accept all cookies</button>
 	</div>
   </div></div>
 
 <script>
 document.getElementById("cookie-essential").onclick = function(e) {
-  days = 200; //number of days to keep the cookie
+  days = 1; //number of days to keep the cookie
   myDate = new Date();
   myDate.setTime(myDate.getTime()+(days*24*60*60*1000));
   is_accepted='false';
@@ -89,7 +93,7 @@ document.getElementById("cookie-essential").onclick = function(e) {
 location.reload();
 }
 document.getElementById("cookie-accept").onclick = function(e) {
-  days = 200; //number of days to keep the cookie
+  days = 100; //number of days to keep the cookie
   myDate = new Date();
   myDate.setTime(myDate.getTime()+(days*24*60*60*1000));
   is_accepted='true';
@@ -104,32 +108,32 @@ location.reload();
 ?>
 
 
+<?php 
+$options = get_option('structured-options');
+if (isset($options['ga_id_input']) AND $options['ga_activate_input']==1):?>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php _e($options['ga_id_input']); ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+	<?php if  ($_COOKIE['allow_analytics_cookies']=='true'):?>		
+	gtag('consent', 'default', {  'ad_storage': 'denied',analytics_storage:'granted'});	
+	<?php else: ?>
+	gtag('consent', 'default', {  'ad_storage': 'denied',analytics_storage:'denied'});		
+	<?php endif; ?>		
+  gtag('js', new Date());
+  gtag('config', '<?php _e($options['ga_id_input']); ?>',{ 'anonymize_ip': true });
+</script>
+<!-- End Google Analytics -->
+
+<?php endif; ?>
+
 
 
 
 <?php if  ($_COOKIE['allow_analytics_cookies']=='true'):?>	
 
-<?php 
-$options = get_option('structured-options');
-if (isset($options['ga_id_input']) AND $options['ga_activate_input']==1):
-?>
-<!-- Google Analytics -->
-<script>
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', '<?php _e($options['ga_id_input']); ?>', 'auto');
-ga('set', 'anonymizeIp', true);
-ga('send', 'pageview');
-
-	
-</script>
-<!-- End Google Analytics -->
-
-<?php endif; ?>
 <?php if (isset($options['metricool_id_input']) AND $options['metricool_activate_input']==1):?>
 <!-- metricool_id_input Code -->
 <script>
@@ -215,7 +219,8 @@ foreach ($_COOKIE as  $key => $value){
     var c_a_name = c_a[c][0];
 	  cookiename=c_a_name.trim();
 	   if (!hastring(cookiename,allowedcookies)){		   
-	   document.cookie = c_a_name+'=; expires='+new Date(0).toUTCString() +'; path=/0/; domain=.ginendo.org';
+	   document.cookie = c_a_name+'=; expires=Thu, 01 Jan 1970 00:00:00 UTC;  path=/0/; ';
+	   document.cookie = c_a_name+'=; expires=Thu, 01 Jan 1970 00:00:00 UTC;  path=/0/; domain=www.' + window.location.hostname + ';';
   		//console.log('removing cookie -> '+c_a_name+'=; expires='+new Date(0).toUTCString() +'; path=/0/; Domain=.ginendo.org;')  
 	  }
     c++;

@@ -1,27 +1,28 @@
 <?php  
+
 $post_classes="card m-0 ";
 $page_div_class="d-sm-flex";
 $content_div_class="container flex-fill";
 $entry_content_class="card-body entry-content";
 
-if ( $args['post_classes'] ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
+if (  isset($args['post_classes']) ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
 $post_classes= $args['post_classes'];
 }
-if ( $args['page_div_class'] ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
+if ( isset($args['page_div_class']) ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
 $page_div_class= $args['page_div_class'];
 }
 
 
-if ( $args['content_div_class'] ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
+if (  isset($args['content_div_class']) ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
 $content_div_class= $args['content_div_class'];
 }
-if ( $args['entry_content_class'] ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
+if (  isset($args['entry_content_class']) ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
 $entry_content_class= $args['entry_content_class'];
 }
 
+get_header(); 
 
 ?>
-<?php get_header(); ?>
 
 <body <?php body_class(); ?>>
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>

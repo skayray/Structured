@@ -10,6 +10,7 @@ require get_template_directory() . '/template-functions/disable_api.php';
 require get_template_directory() . '/template-functions/disable-comments.php';
 require get_template_directory() . '/template-functions/custom-login.php';
 require get_template_directory() . '/template-functions/social-share-shortcode.php';
+require get_template_directory() . '/template-functions/sitemaps.php';
 require get_template_directory() . '/template-features/analytics.php';
 
 function dequeue_jquery_migrate( $scripts ) {
@@ -54,8 +55,8 @@ function init_scripts_and_styles() {
 	
 	//jquery sticky
 		wp_enqueue_script( 'jquery-sticky', get_template_directory_uri() . '/includes/jquery.sticky.js', array('jquery'), 'v1.0', true );
-		wp_enqueue_style( 'chosen', get_template_directory_uri() . '/includes/chosen.min.css', array('jquery') );
-		wp_enqueue_script( 'jquery-chosen', get_template_directory_uri() . '/includes/chosen.jquery.min.js', array('jquery'), 'v1.0', true );
+//		wp_enqueue_style( 'chosen', get_template_directory_uri() . '/includes/chosen.min.css', array('jquery') );
+//		wp_enqueue_script( 'jquery-chosen', get_template_directory_uri() . '/includes/chosen.jquery.min.js', array('jquery'), 'v1.0', true );
 	
 		wp_enqueue_script( 'generic-scripts', get_template_directory_uri() . '/includes/generic-scripts.js', array('jquery'), 'v1.2', true );
 

@@ -5,7 +5,7 @@
 <file name="menu-walker.php" server="ftp.btcongress.com/wp-content/" local="133281198061053961" remote="133173950400000000" Dst="2" />
 <file name="svg-support.php" server="ftp.btcongress.com/wp-content/" local="133281198061493371" remote="133173950400000000" Dst="2" />
 <file name="theme-customize-menu.php" server="ftp.btcongress.com/wp-content/" local="133281198061926751" remote="133173950400000000" Dst="2" />
-<file name="theme-options-menu.php" server="ftp.btcongress.com/wp-content/" local="133295030070802978" remote="133295029800000000" Dst="2" />
+<file name="theme-options-menu.php" server="ftp.btcongress.com/wp-content/" local="133281198062167840" remote="133173950400000000" Dst="2" />
 <file name="disable_api.php" server="ftp.btcongress.com/wp-content/" local="133281198060344009" remote="133173950400000000" Dst="2" />
 <file name="custom-login.php" server="ftp.btcongress.com/wp-content/" local="133281198059377849" remote="133173950400000000" Dst="2" />
 <file name="custom-login.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133129203492898026" remote="132908220000000000" Dst="1" />
@@ -20,4 +20,14 @@
 <file name="social-share-shortcode.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133173990232353178" remote="133173991200000000" Dst="1" />
 <file name="disable-comments.php" server="ftp.btcongress.com/wp-content/" local="133281198059527768" remote="133173950400000000" Dst="2" />
 <file name="social-share-shortcode.php" server="ftp.btcongress.com/wp-content/" local="133281198061274159" remote="133173955800000000" Dst="2" />
+<file name="custom-login.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198059377849" remote="133295602800000000" Dst="2" />
+<file name="disable-comments.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198059527768" remote="133295602800000000" Dst="2" />
+<file name="disable_api.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198060344009" remote="133295602800000000" Dst="2" />
+<file name="duplicate-posts.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198060196592" remote="133295602800000000" Dst="2" />
+<file name="include-files.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198060525595" remote="133295602800000000" Dst="2" />
+<file name="menu-walker.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198061053961" remote="133295602800000000" Dst="2" />
+<file name="social-share-shortcode.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198061274159" remote="133295602800000000" Dst="2" />
+<file name="svg-support.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198061493371" remote="133295602800000000" Dst="2" />
+<file name="theme-customize-menu.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198061926751" remote="133295602800000000" Dst="2" />
+<file name="theme-options-menu.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133295030070802978" remote="133295602800000000" Dst="2" />
 </dwsync>

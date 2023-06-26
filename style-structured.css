@@ -156,18 +156,24 @@ h1 {}
 @media (max-width: 575.98px) {.allow-sidebar{    max-width: 100% }}
 
 
-#toTop{
-    display: none;
-    position: fixed;
+
+#toTop {
+  display: none; /* Hidden by default */
+     position: fixed;
     bottom: 20px;
     right: 30px;
     z-index: 99;
     border: none;
     outline: none;
     background-color: #42424263;
-    color: #fff;
+    color: white;
     cursor: pointer;
     padding: 10px 15px 8px;
     border-radius: 10px;
     font-size: 18px;
-	}
+
+}
+
+#toTop:hover {
+  background-color: #555555ba; /* Add a dark-grey background on hover */
+}
