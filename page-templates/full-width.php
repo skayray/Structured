@@ -6,6 +6,7 @@
 */
 
  get_template_part( 'template-parts/_page-templates-fixed-elements',null,array('page_div_class'=> 'mt-0 page-full','content_div_class'=>'container-full','post_classes'=>'fullwidth','entry_content_class'=>'entry-content') ); 
+ get_template_part( 'template-parts/_page-templates-fixed-elements',null,array('page_div_class'=> 'mt-0 page-full','content_div_class'=>'container-full') ); 
 ?>
 
 
