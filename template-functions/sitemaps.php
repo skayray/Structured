@@ -1,11 +1,10 @@
-
-<?php 
+<?php  
 function generate_sitemap() {
     $posts_for_sitemap = get_posts(array(
         'numberposts' => -1,
         'orderby' => 'modified',
         'post_type' => array('post', 'page'),
-        'post_status' => 'publish'
+        'post_status' => 'publish' 
     ));
 
     $sitemap_content = '<?xml version="1.0" encoding="UTF-8"?>';

@@ -4,7 +4,13 @@
 //vanilla
 document.addEventListener('DOMContentLoaded', function(){
 //hamburger animation
-document.querySelector('[data-bs-toggle="side-collapse"]').addEventListener('click', function(){this.classList.toggle('is-active');});
+const CollapseToggle = document.querySelector('[data-bs-toggle="collapse"]');
+
+  if (CollapseToggle) {
+    CollapseToggle.addEventListener('click', function() {
+     this.classList.toggle('is-active');
+    });
+  }
 	
 });
 

@@ -31,6 +31,7 @@ function include_file($atts) {
 	 } else {
 		  $clean_file_path = $filepath;
 	 }
+
 	 //END modified portion of code
 	 //check if the filepath was specified and if the file exists
 	 if ($filepath != 'NULL' && file_exists(get_stylesheet_directory() . "/" . $clean_file_path)){

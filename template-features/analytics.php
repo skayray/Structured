@@ -70,15 +70,16 @@ if(!isset($_COOKIE["allow_analytics_cookies"])) { ?>
 		#cookies_body{max-width:960px; width:90%; margin:auto; align-items: center;display: flex;
     justify-content: space-between; }	
 		#cookie_save{    display: flex;    gap: 0.5rem;       justify-content: end;  }
-		#cookie_save .btn{font-size:.9rem}
+		#cookie_save .btn{font-size:13px; }
 		@media(max-width:575px){ #cookies_body{display:grid;  gap:1rem;} 	#cookie_save{justify-content:center;    display: flex;
-    gap: .5rem;}}
+    gap: .5rem;} 
+    #cookie_save .btn{font-size:13px; padding:3px 5px}}
 	</style> 
 <div id="cookie_banner">
 <div id="cookies_body"><div id="cookie_info"><p class="m-0 p-0 ">This site uses cookies to offer you a better browsing experience.<br>Find out more on <a href="<?php echo site_url();echo '/'.$cookie_slug;?>">how we use cookies.</a></p> 
 </div>
 	<div id="cookie_save">
-  <button  id="cookie-essential" class="border-0  btn text-white" type="button">Essential cookies only</button>
+  <button  id="cookie-essential" class="border-0  btn text-white" type="button">Essential only</button>
   <button  id="cookie-accept" class="rounded-0 btn btn-light" type="button">Accept all cookies</button>
 	</div>
   </div></div>
@@ -117,7 +118,7 @@ if (isset($options['ga_id_input']) AND $options['ga_activate_input']==1):?>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-	<?php if  ($_COOKIE['allow_analytics_cookies']=='true'):?>		
+	<?php if  (isset($_COOKIE['allow_analytics_cookies']) && $_COOKIE['allow_analytics_cookies']=='true'):?>		
 	gtag('consent', 'default', {  'ad_storage': 'denied',analytics_storage:'granted'});	
 	<?php else: ?>
 	gtag('consent', 'default', {  'ad_storage': 'denied',analytics_storage:'denied'});		
@@ -127,14 +128,29 @@ if (isset($options['ga_id_input']) AND $options['ga_activate_input']==1):?>
 </script>
 <!-- End Google Analytics -->
 
+
+
+<?php endif; ?>
+
+<?php 
+$options = get_option('structured-options');
+if (isset($options['Gtag_activate_input']) AND $options['Gtag_activate_input']==1):
+if  (isset($_COOKIE['allow_analytics_cookies']) && $_COOKIE['allow_analytics_cookies']=='true'):?>		
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','<?php _e($options['Gtag_id_input']); ?>');</script>
+<!-- End Google Tag Manager -->
+<?php endif; ?>
 <?php endif; ?>
 
 
+<?php if (isset($options['cookie_activate_input']) && isset($_COOKIE['allow_analytics_cookies']) && $_COOKIE['allow_analytics_cookies'] == 'true'): 
+?>	
 
-
-<?php if  ($_COOKIE['allow_analytics_cookies']=='true'):?>	
-
-<?php if (isset($options['metricool_id_input']) AND $options['metricool_activate_input']==1):?>
+<?php if (isset($options['metricool_id_input']) AND isset($options['metricool_activate_input']) AND $options['metricool_activate_input']==1):?>
 <!-- metricool_id_input Code -->
 <script>
 function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"<?php _e($options['metricool_id_input']); ?>"})});
@@ -144,7 +160,7 @@ function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document
 <?php endif; ?>
 
 <?php 
-if (isset($options['fbpixel_id_input']) AND $options['fbpixel_activate_input']==1):
+if (isset($options['fbpixel_id_input']) AND isset($options['fbpixel_activate_input']) AND $options['fbpixel_activate_input']==1):
 ?>
 
 <!-- Meta Pixel Code -->
@@ -171,7 +187,7 @@ src="https://www.facebook.com/tr?id=<?php _e($options['fbpixel_id_input']); ?>&e
 
 
 <?php 
-if (isset($options['matomo_id_input']) AND $options['matomo_activate_input']==1):
+if (isset($options['matomo_id_input']) AND isset($options['matomo_activate_input']) AND $options['matomo_activate_input']==1):
 ?>
 <!-- Matomo -->
 <script>
@@ -195,14 +211,14 @@ if (document.cookie.match('(^|;)\\s*' + 'allow_analytics_cookies' + '\\s*=\\s*([
 <?php endif; ?>
 <?php endif; ?>
 
-<?php if  ($_COOKIE['allow_analytics_cookies']!='true'):
-$allowedcookies = array("PHPSESSID", "cookieconsent_status", "allow_analytics_cookies");
+<?php if  (isset($_COOKIE['allow_analytics_cookies']) && $_COOKIE['allow_analytics_cookies']!='true'):
+$allowedcookies = array("PHPSESSID", "cookieconsent_status", "allow_analytics_cookies","wp_",'BTclientAuth','BTclientAuthExp');
+if (!headers_sent()) {	
 foreach ($_COOKIE as  $key => $value){
 	if (!in_array($key,$allowedcookies)){
 	 unset($_COOKIE[$key]); 
-		echo  $_COOKIE[$key];
-    setcookie($key, 'deleted', 1, '/'); 
 	}
+}
 }
 ?>	
 <script>
@@ -210,7 +226,7 @@ foreach ($_COOKIE as  $key => $value){
   var c_a = document.cookie.split (';').map(cookie => cookie.split('='));
   var c = 0;
 //protected cookies
-	const allowedcookies = ["PHPSESSID", "allow_analytics_cookies","wp_"];
+	const allowedcookies = ["PHPSESSID", "allow_analytics_cookies","wp_",'BTclientAuth','BTclientAuthExp'];
 	function hastring (cookie,array){
 		return array.some(item => cookie.includes(item));
 	}

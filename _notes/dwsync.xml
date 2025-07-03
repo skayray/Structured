@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="functions.php" server="ftp.btcongress.com/wp-content/" local="133173991070918814" remote="133174021800000000" Dst="1" />
-<file name="footer.php" server="ftp.btcongress.com/wp-content/" local="133129203431005105" remote="133174021200000000" Dst="1" />
-<file name="header.php" server="ftp.btcongress.com/wp-content/" local="133173990361622979" remote="133174021800000000" Dst="1" />
-<file name="index.php" server="ftp.btcongress.com/wp-content/" local="133129203489138546" remote="133174021800000000" Dst="1" />
-<file name="menu.php" server="ftp.btcongress.com/wp-content/" local="133137608433652853" remote="133174021800000000" Dst="1" />
-<file name="sidebar.php" server="ftp.btcongress.com/wp-content/" local="133129203490931169" remote="133174021800000000" Dst="1" />
-<file name="style.css" server="ftp.btcongress.com/wp-content/" local="133174006287928688" remote="133174021800000000" Dst="1" />
-<file name="404.php" server="ftp.btcongress.com/wp-content/" local="133135244240993449" remote="133174021200000000" Dst="1" />
-<file name="style-structured.css" server="ftp.btcongress.com/wp-content/" local="133186844013993291" remote="133186843800000000" Dst="1" />
+<file name="functions.php" server="ftp.btcongress.com/wp-content/" local="133625016093878319" remote="133625016000000000" Dst="2" />
+<file name="footer.php" server="ftp.btcongress.com/wp-content/" local="133281197972823610" remote="133614719400000000" Dst="2" />
+<file name="header.php" server="ftp.btcongress.com/wp-content/" local="133614712775508899" remote="133614719400000000" Dst="2" />
+<file name="index.php" server="ftp.btcongress.com/wp-content/" local="133282885210000000" remote="133614720000000000" Dst="2" />
+<file name="menu.php" server="ftp.btcongress.com/wp-content/" local="133307940840097785" remote="133614720000000000" Dst="2" />
+<file name="sidebar.php" server="ftp.btcongress.com/wp-content/" local="133281198057966453" remote="133614720000000000" Dst="2" />
+<file name="style.css" server="ftp.btcongress.com/wp-content/" local="133614730771042330" remote="133614730200000000" Dst="2" />
+<file name="404.php" server="ftp.btcongress.com/wp-content/" local="133281197968370069" remote="133614719400000000" Dst="2" />
+<file name="style-structured.css" server="ftp.btcongress.com/wp-content/" local="133614714037993042" remote="133614720000000000" Dst="2" />
 <file name="404.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="132993234329352632" remote="132908749800000000" Dst="2" />
 <file name="footer.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="132993234331646160" remote="132908749800000000" Dst="2" />
 <file name="header.php" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="132993234348611826" remote="132908749800000000" Dst="2" />
@@ -19,9 +19,9 @@
 <file name="style-structured.css" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133020310434891154" remote="133020310200000000" Dst="2" />
 <file name="screenshot.png" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="132993234422831509" remote="132908749800000000" Dst="2" />
 <file name="style.css" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133014215537921754" remote="133014215400000000" Dst="2" />
-<file name="screenshot.png" server="ftp.btcongress.com/wp-content/" local="133129203491708448" remote="133174021800000000" Dst="1" />
-<file name="LICENSE" server="ftp.btcongress.com/wp-content/" local="133173993135935183" remote="133174021800000000" Dst="1" />
-<file name="README.md" server="ftp.btcongress.com/wp-content/" local="133173993135554577" remote="133174021800000000" Dst="1" />
+<file name="screenshot.png" server="ftp.btcongress.com/wp-content/" local="133281198058203325" remote="133614720000000000" Dst="2" />
+<file name="LICENSE" server="ftp.btcongress.com/wp-content/" local="133281197971293105" remote="133614720000000000" Dst="2" />
+<file name="README.md" server="ftp.btcongress.com/wp-content/" local="133281197966551826" remote="133614720000000000" Dst="2" />
 <file name="404.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281197968370069" remote="133295602800000000" Dst="2" />
 <file name="footer.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281197972823610" remote="133295602800000000" Dst="2" />
 <file name="functions.php" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133295604548141375" remote="133295604000000000" Dst="2" />
@@ -36,4 +36,20 @@
 <file name="style-structured.css" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281996720246050" remote="133295602800000000" Dst="2" />
 <file name=".gitattributes" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281197965226460" remote="133295602800000000" Dst="2" />
 <file name=".gitignore" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133282000595070640" remote="133295602800000000" Dst="2" />
+<file name=".gitattributes" server="ftp.btcongress.com/wp-content/" local="133281197965226460" remote="133614719400000000" Dst="2" />
+<file name=".gitignore" server="ftp.btcongress.com/wp-content/" local="133282000595070640" remote="133614719400000000" Dst="2" />
+<file name=".gitattributes" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281197965226460" remote="133651751400000000" Dst="2" />
+<file name=".gitignore" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133282000595070640" remote="133651751400000000" Dst="2" />
+<file name="404.php" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281197968370069" remote="133651751400000000" Dst="2" />
+<file name="footer.php" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281197972823610" remote="133651751400000000" Dst="2" />
+<file name="functions.php" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133960266493388967" remote="133960266000000000" Dst="2" />
+<file name="header.php" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133614712775508899" remote="133651751400000000" Dst="2" />
+<file name="index.php" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133282885210000000" remote="133651752000000000" Dst="2" />
+<file name="LICENSE" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281197971293105" remote="133651752000000000" Dst="2" />
+<file name="menu.php" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133307940840097785" remote="133651752000000000" Dst="2" />
+<file name="README.md" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281197966551826" remote="133651752000000000" Dst="2" />
+<file name="sidebar.php" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198057966453" remote="133651752000000000" Dst="2" />
+<file name="style-structured.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133881670830305409" remote="133881670800000000" Dst="2" />
+<file name="screenshot.png" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198058203325" remote="133651752000000000" Dst="2" />
+<file name="style.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133625013973387623" remote="133651752000000000" Dst="2" />
 </dwsync>

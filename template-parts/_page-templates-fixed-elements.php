@@ -24,18 +24,7 @@ get_header();
 
 ?>
 
-$post_classes="card m-0 "; 
-if ( $args['page_div_class'] ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
-$page_div_class= $args['page_div_class'];
-}
-else{$page_div_class="d-sm-flex mt-4";}
 
-if ( $args['content_div_class'] ) { //qualor importando il template (i.e. da full width gli passassi degli argomenti..)
-$content_div_class= $args['content_div_class'];
-}
-else{$content_div_class="container flex-fill";}
-
-?>
 <?php get_header(); ?>
 
 <body <?php body_class(); ?>>

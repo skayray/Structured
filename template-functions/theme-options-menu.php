@@ -86,7 +86,7 @@ function structured_initialize_sect0() {
 add_action('admin_init', 'structured_initialize_sect0');
 
  
- function display_section_messag0() {
+ function display_section_message0() {
 	 echo '
 <p>Enable cookies</p>		 ';
  } // end structured_general_options_callback
@@ -94,14 +94,18 @@ add_action('admin_init', 'structured_initialize_sect0');
 function render_cookie_activate_input($args) {
 	// First, we read the options collection
 	$options = get_option('structured-options');
-	$html .= '<input type="checkbox" id="cookie_activate_input" name="structured-options[cookie_activate_input]" value="1" '.  checked(1,  $options['cookie_activate_input'], false) .'>'; 	 
+	if (!is_array($options) OR !isset($options['cookie_activate_input']) OR  empty($options['cookie_activate_input'])) 
+	{$options=array(); $options['cookie_activate_input']=0;}
+
+	$html = '<input type="checkbox" id="cookie_activate_input" name="structured-options[cookie_activate_input]" value="1" '.  checked(1,  $options['cookie_activate_input'], false) .'>'; 	 
 	echo $html;
 } 
 
    
 function render_cookie_page_slug_input($args) {
 	$options = get_option('structured-options');
-	if ($options['cookie_page_slug_input']==""){$options['cookie_page_slug_input']='cookies';}
+	if (!is_array($options) OR !isset($options['cookie_page_slug_input']) OR  empty($options['cookie_page_slug_input'])) 
+	{$options=array(); $options['cookie_page_slug_input']='cookies';}
 	$html = '<label for="cookie_page_slug_input"> '  . $args[0] . '</label><br>'; 	
 	$html .= '<input type="text" id="cookie_page_slug_input" name="structured-options[cookie_page_slug_input]" value="'. $options['cookie_page_slug_input'].'">'; 	 
 	echo $html;
@@ -158,6 +162,9 @@ add_action('admin_init', 'structured_initialize_sect1');
 function render_og_image_input($args) {
 	// First, we read the options collection
 	$options = get_option('structured-options');
+	if (!is_array($options) OR !isset($options['og_image_field']) OR  empty($options['og_image_field'])) 
+	{$options=array(); $options['og_image_field']='';}
+
 	// Next, we update the name attribute to access this element's ID in the context of the display options array
 	// We also access the show_header element of the options collection in the call to the checked() helper function
 	$html = '<label for="og_image_field"> '  . $args[0] . '</label><br>'; 	
@@ -199,7 +206,7 @@ function structured_initialize_sect2() {
 		'structured-options',    // The page on which this option will be displayed
 		'settings_section_two',         // The name of the section to which this field belongs
 		array(                              // The array of arguments to pass to the callback. In this case, just a description.
-			'Insert the Analytics id ie. UA-1234-123'
+			'Insert the Analytics id ie. G-1234123'
 		)
 
 	);
@@ -225,20 +232,107 @@ add_action('admin_init', 'structured_initialize_sect2');
 function render_ga_activate_input($args) {
 	// First, we read the options collection
 	$options = get_option('structured-options');
-	$html .= '<input type="checkbox" id="ga_activate_input" name="structured-options[ga_activate_input]" value="1" '.  checked(1,  $options['ga_activate_input'], false) .'>'; 	 
+		if (!is_array($options) OR !isset($options['ga_activate_input']) OR  empty($options['ga_activate_input'])) 
+	{$options=array(); $options['ga_activate_input']='';}
+
+	$html = '<input type="checkbox" id="ga_activate_input" name="structured-options[ga_activate_input]" value="1" '.  checked(1,  $options['ga_activate_input'], false) .'>'; 	 
 	echo $html;
 } 
 
    
 function render_ga_id_input($args) {
 	$options = get_option('structured-options');
+		if (!is_array($options) OR !isset($options['ga_id_input']) OR  empty($options['ga_id_input'])) 
+	{$options=array(); $options['ga_id_input']='';}
+
 	$html = '<label for="ga_id_input"> '  . $args[0] . '</label><br>'; 	
 	$html .= '<input type="text" id="ga_id_input" name="structured-options[ga_id_input]" value='. $options['ga_id_input'].'>'; 	 
 	echo $html;
 } 
 
+//Gtag section
 
-// second section
+function structured_initialize_Gtag() {
+ 
+	// If the theme options don't exist, create them.
+	if( false == get_option( 'structured-options' ) ) {  
+		add_option( 'structured-options' );
+	} // end if
+ 
+	// First, we register a section. This is necessary since all future options must belong to a 
+	add_settings_section(
+		'settings_section_Gtag',         // ID used to identify this section and with which to register options
+		'Gtag options',                  // Title to be displayed on the administration page
+		'display_section_messageGtag', // Callback used to render the description of the section
+		'structured-options'     // Page on which to add this section of options
+	);
+	 
+	// Next, we'll introduce the fields for toggling the visibility of content elements.
+	add_settings_field( 
+	'Gtag_activate_input',                      // ID used to identify the field throughout the theme
+	'Activate Gtag',                           // The label to the left of the option interface element
+	'render_Gtag_activate_input',   // The name of the function responsible for rendering the option interface
+	'structured-options',    // The page on which this option will be displayed
+	'settings_section_Gtag'         // The name of the section to which this field belongs
+	);
+	add_settings_field( 
+		'Gtag_id_input',                      // ID used to identify the field throughout the theme
+		'Analytics field',                           // The label to the left of the option interface element
+		'render_Gtag_id_input',   // The name of the function responsible for rendering the option interface
+		'structured-options',    // The page on which this option will be displayed
+		'settings_section_Gtag',         // The name of the section to which this field belongs
+		array(                              // The array of arguments to pass to the callback. In this case, just a description.
+			'Insert the Gtag id (ex. GTM-N3MPWB4M)'
+		)
+
+	);
+	
+	 
+	 
+	// Finally, we register the fields with WordPress
+	register_setting(
+		'structured-options',
+		'Gtag_activate',
+		'Gtag_id_input'
+	);
+	 
+} // end structured_initialize_structured_initialize_sect1
+add_action('admin_init', 'structured_initialize_Gtag');
+
+ 
+ function display_section_messageGtag() {
+	 echo '
+<p style="margin:0">Gtag </p>		 ';
+ } // end structured_general_options_callback
+   
+function render_Gtag_activate_input($args) {
+	// First, we read the options collection
+	$options = get_option('structured-options');
+		if (!is_array($options) OR !isset($options['Gtag_activate_input']) OR  empty($options['Gtag_activate_input'])) 
+	{$options=array(); $options['Gtag_activate_input']='';}
+
+	$html = '<input type="checkbox" id="Gtag_activate_input" name="structured-options[Gtag_activate_input]" value="1" '.  checked(1,  $options['Gtag_activate_input'], false) .'>'; 	 
+	echo $html;
+} 
+
+   
+function render_Gtag_id_input($args) {
+	$options = get_option('structured-options');
+		if (!is_array($options) OR !isset($options['Gtag_id_input']) OR  empty($options['Gtag_id_input'])) 
+	{$options=array(); $options['Gtag_id_input']='';}
+
+	$html = '<label for="Gtag_id_input"> '  . $args[0] . '</label><br>'; 	
+	$html .= '<input type="text" id="Gtag_id_input" name="structured-options[Gtag_id_input]" value='. $options['Gtag_id_input'].'>'; 	 
+	echo $html;
+} 
+
+
+
+
+//fine Gtag
+
+
+// third section
 
 function structured_initialize_sect3() {
  
@@ -285,20 +379,29 @@ function structured_initialize_sect3() {
 	);
 	 
 } // end structured_initialize_structured_initialize_sect1
+
 add_action('admin_init', 'structured_initialize_sect3');
 
- 
+  function display_section_message3() {
+	 echo '<p>Facebook</p> ';
+ } // end structured_general_options_callback
+   
+
    
 function render_fbpixel_activate_input($args) {
 	// First, we read the options collection
 	$options = get_option('structured-options');
-	$html .= '<input type="checkbox" id="fbpixel_activate_input" name="structured-options[fbpixel_activate_input]" value="1" '.  checked(1,  $options['fbpixel_activate_input'], false) .'>'; 	 
+		if (!is_array($options) OR !isset($options['fbpixel_activate_input']) OR  empty($options['fbpixel_activate_input'])) 
+	{$options=array(); $options['fbpixel_activate_input']='';}
+	$html = '<input type="checkbox" id="fbpixel_activate_input" name="structured-options[fbpixel_activate_input]" value="1" '.  checked(1,  $options['fbpixel_activate_input'], false) .'>'; 	 
 	echo $html;
 } 
 
    
 function render_fbpixel_id_input($args) {
 	$options = get_option('structured-options');
+		if (!is_array($options) OR !isset($options['fbpixel_id_input']) OR  empty($options['fbpixel_id_input'])) 
+	{$options=array(); $options['fbpixel_id_input']='';}
 	$html = '<label for="fbpixel_id_input"> '  . $args[0] . '</label><br>'; 	
 	$html .= '<input type="text" id="fbpixel_id_input" name="structured-options[fbpixel_id_input]" value='. $options['fbpixel_id_input'].'>'; 	 
 	echo $html;
@@ -363,13 +466,17 @@ add_action('admin_init', 'structured_initialize_sect4');
 function render_matomo_activate_input($args) {
 	// First, we read the options collection
 	$options = get_option('structured-options');
-	$html .= '<input type="checkbox" id="matomo_activate_input" name="structured-options[matomo_activate_input]" value="1" '.  checked(1,  $options['matomo_activate_input'], false) .'>'; 	 
+	if (!is_array($options) OR !isset($options['matomo_activate_input']) OR  empty($options['matomo_activate_input'])) 
+	{$options=array(); $options['matomo_activate_input']='';}
+	$html = '<input type="checkbox" id="matomo_activate_input" name="structured-options[matomo_activate_input]" value="1" '.  checked(1,  $options['matomo_activate_input'], false) .'>'; 	 
 	echo $html;
 } 
 
    
 function render_matomo_id_input($args) {
 	$options = get_option('structured-options');
+	if (!is_array($options) OR !isset($options['matomo_id_input']) OR  empty($options['matomo_id_input'])) 
+	{$options=array(); $options['matomo_id_input']='';}
 	$html = '<label for="matomo_id_input"> '  . $args[0] . '</label><br>'; 	
 	$html .= '<input type="text" id="matomo_id_input" name="structured-options[matomo_id_input]" value='. $options['matomo_id_input'].'>'; 	 
 	echo $html;
@@ -424,7 +531,7 @@ function structured_initialize_sect5() {
 add_action('admin_init', 'structured_initialize_sect5');
 
  
- function display_section_messag5() {
+ function display_section_message5() {
 	 echo '
 <p>Enable Metricool</p>		 ';
  } // end structured_general_options_callback
@@ -432,13 +539,17 @@ add_action('admin_init', 'structured_initialize_sect5');
 function render_metricool_activate_input($args) {
 	// First, we read the options collection
 	$options = get_option('structured-options');
-	$html .= '<input type="checkbox" id="metricool_activate_input" name="structured-options[metricool_activate_input]" value="1" '.  checked(1,  $options['metricool_activate_input'], false) .'>'; 	 
+	if (!is_array($options) OR !isset($options['metricool_activate_input']) OR  empty($options['metricool_activate_input'])) 
+	{$options=array(); $options['metricool_activate_input']='';}
+	$html = '<input type="checkbox" id="metricool_activate_input" name="structured-options[metricool_activate_input]" value="1" '.  checked(1,  $options['metricool_activate_input'], false) .'>'; 	 
 	echo $html;
 } 
 
    
 function render_metricool_id_input($args) {
 	$options = get_option('structured-options');
+	if (!is_array($options) OR !isset($options['metricool_id_input']) OR  empty($options['metricool_id_input'])) 
+	{$options=array(); $options['metricool_id_input']='';}
 	$html = '<label for="metricool_id_input"> '  . $args[0] . '</label><br>'; 	
 	$html .= '<input type="text" id="metricool_id_input" name="structured-options[metricool_id_input]" value='. $options['metricool_id_input'].'>'; 	 
 	echo $html;

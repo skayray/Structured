@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="all.css" server="ftp.btcongress.com/wp-content/" local="133281198023262101" remote="133173950400000000" Dst="2" />
-<file name="brands.css" server="ftp.btcongress.com/wp-content/" local="133281198023608908" remote="133173950400000000" Dst="2" />
-<file name="brands.min.css" server="ftp.btcongress.com/wp-content/" local="133281198024121609" remote="133173950400000000" Dst="2" />
-<file name="all.min.css" server="ftp.btcongress.com/wp-content/" local="133281198023779381" remote="133173950400000000" Dst="2" />
-<file name="fontawesome.css" server="ftp.btcongress.com/wp-content/" local="133281198025370864" remote="133173950400000000" Dst="2" />
-<file name="regular.css" server="ftp.btcongress.com/wp-content/" local="133281198025203376" remote="133173950400000000" Dst="2" />
-<file name="fontawesome.min.css" server="ftp.btcongress.com/wp-content/" local="133281198025032583" remote="133173950400000000" Dst="2" />
-<file name="regular.min.css" server="ftp.btcongress.com/wp-content/" local="133281198025973165" remote="133173950400000000" Dst="2" />
-<file name="solid.css" server="ftp.btcongress.com/wp-content/" local="133281198026197517" remote="133173950400000000" Dst="2" />
-<file name="solid.min.css" server="ftp.btcongress.com/wp-content/" local="133281198026795113" remote="133173950400000000" Dst="2" />
-<file name="svg-with-js.css" server="ftp.btcongress.com/wp-content/" local="133281198026975194" remote="133173950400000000" Dst="2" />
-<file name="svg-with-js.min.css" server="ftp.btcongress.com/wp-content/" local="133281198027166630" remote="133173950400000000" Dst="2" />
-<file name="v4-shims.css" server="ftp.btcongress.com/wp-content/" local="133281198027892386" remote="133173950400000000" Dst="2" />
-<file name="v4-shims.min.css" server="ftp.btcongress.com/wp-content/" local="133281198028044000" remote="133173950400000000" Dst="2" />
+<file name="all.css" server="ftp.btcongress.com/wp-content/" local="133281198023262101" remote="133614720000000000" Dst="2" />
+<file name="brands.css" server="ftp.btcongress.com/wp-content/" local="133281198023608908" remote="133614720000000000" Dst="2" />
+<file name="brands.min.css" server="ftp.btcongress.com/wp-content/" local="133281198024121609" remote="133614720000000000" Dst="2" />
+<file name="all.min.css" server="ftp.btcongress.com/wp-content/" local="133281198023779381" remote="133614720000000000" Dst="2" />
+<file name="fontawesome.css" server="ftp.btcongress.com/wp-content/" local="133281198025370864" remote="133614720000000000" Dst="2" />
+<file name="regular.css" server="ftp.btcongress.com/wp-content/" local="133281198025203376" remote="133614720000000000" Dst="2" />
+<file name="fontawesome.min.css" server="ftp.btcongress.com/wp-content/" local="133281198025032583" remote="133614720000000000" Dst="2" />
+<file name="regular.min.css" server="ftp.btcongress.com/wp-content/" local="133281198025973165" remote="133614720000000000" Dst="2" />
+<file name="solid.css" server="ftp.btcongress.com/wp-content/" local="133281198026197517" remote="133614720000000000" Dst="2" />
+<file name="solid.min.css" server="ftp.btcongress.com/wp-content/" local="133281198026795113" remote="133614720000000000" Dst="2" />
+<file name="svg-with-js.css" server="ftp.btcongress.com/wp-content/" local="133281198026975194" remote="133614720000000000" Dst="2" />
+<file name="svg-with-js.min.css" server="ftp.btcongress.com/wp-content/" local="133281198027166630" remote="133614720000000000" Dst="2" />
+<file name="v4-shims.css" server="ftp.btcongress.com/wp-content/" local="133281198027892386" remote="133614720000000000" Dst="2" />
+<file name="v4-shims.min.css" server="ftp.btcongress.com/wp-content/" local="133281198028044000" remote="133614720000000000" Dst="2" />
 <file name="all.css" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133129203462069265" remote="132908220000000000" Dst="1" />
 <file name="all.min.css" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133129203462476209" remote="132908220000000000" Dst="1" />
 <file name="brands.css" server="ftp.btcongress.com/hr2023.humanrepacademy.org/wp-content/" local="133129203462247390" remote="132908220000000000" Dst="1" />
@@ -42,4 +42,18 @@
 <file name="svg-with-js.min.css" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198027166630" remote="133295602800000000" Dst="2" />
 <file name="v4-shims.css" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198027892386" remote="133295602800000000" Dst="2" />
 <file name="v4-shims.min.css" server="ftp.btcongress.com/isge2024.isgesociety.com/" local="133281198028044000" remote="133295602800000000" Dst="2" />
+<file name="all.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198023262101" remote="133651751400000000" Dst="2" />
+<file name="all.min.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198023779381" remote="133651751400000000" Dst="2" />
+<file name="brands.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198023608908" remote="133651751400000000" Dst="2" />
+<file name="brands.min.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198024121609" remote="133651751400000000" Dst="2" />
+<file name="fontawesome.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198025370864" remote="133651751400000000" Dst="2" />
+<file name="fontawesome.min.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198025032583" remote="133651751400000000" Dst="2" />
+<file name="regular.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198025203376" remote="133651751400000000" Dst="2" />
+<file name="regular.min.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198025973165" remote="133651751400000000" Dst="2" />
+<file name="solid.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198026197517" remote="133651751400000000" Dst="2" />
+<file name="solid.min.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198026795113" remote="133651751400000000" Dst="2" />
+<file name="svg-with-js.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198026975194" remote="133651751400000000" Dst="2" />
+<file name="svg-with-js.min.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198027166630" remote="133651751400000000" Dst="2" />
+<file name="v4-shims.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198027892386" remote="133651751400000000" Dst="2" />
+<file name="v4-shims.min.css" server="ftp.btcongress.com/isge2026.isgesociety.com/" local="133281198028044000" remote="133651751400000000" Dst="2" />
 </dwsync>

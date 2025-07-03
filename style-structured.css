@@ -17,12 +17,12 @@ Main theme real styles
 /*hamburger_ani*/
 
 .hamburger .line{
-  width: 30px;
-  height: 4px;
+  width: 28px;
+  height: 3px;
   border-radius: 5px;
   background-color: #ecf0f1;
   display: block;
-  margin: 6px auto;
+  margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -63,10 +63,10 @@ Main theme real styles
 }
 
 .is-active #hamburger-9 .line:nth-child(3){
-  -webkit-transform: translateY(-11px) rotate(90deg);
-  -ms-transform: translateY(-11px) rotate(90deg);
-  -o-transform: translateY(-11px) rotate(90deg);
-  transform: translateY(-11px) rotate(90deg);
+  -webkit-transform: translateY(-7px) rotate(90deg);
+  -ms-transform: translateY(-7px) rotate(90deg);
+  -o-transform: translateY(-7px) rotate(90deg);
+  transform: translateY(-7px) rotate(90deg);
 }
 
 
@@ -153,15 +153,11 @@ figure.footer-logo .custom-logo{max-width:300px; height:auto}
 h1 {}
 
 
-@media (max-width: 575.98px) {.allow-sidebar{    max-width: 100% }}
-
-
-
+@media (max-width: 575.98px) {
+	.allow-sidebar{    max-width: 100% }
+}
 #toTop {
-  display: none; /* Hidden by default */
-     position: fixed;
 
-#toTop{
     display: none;
     position: fixed;
     bottom: 20px;

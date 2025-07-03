@@ -1,7 +1,11 @@
 <?php 
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require get_template_directory() . '/template-functions/theme-options-menu.php';
- require get_template_directory() . '/template-functions/theme-customize-menu.php';
+require get_template_directory() . '/template-functions/theme-customize-menu.php';
 require get_template_directory() . '/template-functions/menu-walker.php';
 require get_template_directory() . '/template-functions/duplicate-posts.php';
 require get_template_directory() . '/template-functions/include-files.php';
@@ -11,6 +15,7 @@ require get_template_directory() . '/template-functions/disable-comments.php';
 require get_template_directory() . '/template-functions/custom-login.php';
 require get_template_directory() . '/template-functions/social-share-shortcode.php';
 require get_template_directory() . '/template-functions/sitemaps.php';
+require get_template_directory() . '/template-functions/meta-description-field.php';
 require get_template_directory() . '/template-features/analytics.php';
 
 function dequeue_jquery_migrate( $scripts ) {
@@ -38,8 +43,8 @@ add_action( 'init', 'init_menus' );
 
 function init_scripts_and_styles() {
 	// bootstrap
-	wp_enqueue_style( 'bootstrap-5', get_template_directory_uri() . '/includes/bootstrap-5.1.3-dist/css/bootstrap.min.css', array(), 'v5.1.3', 'all' );
-	wp_enqueue_script( 'bootstrap-5-js', get_template_directory_uri() . '/includes/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js', array('jquery'), 'v5.1.3', true );
+	wp_enqueue_style( 'bootstrap-5', get_template_directory_uri() . '/includes/bootstrap-5.3.7-dist/css/bootstrap.min.css', array(), 'v5.1.3', 'all' );
+	wp_enqueue_script( 'bootstrap-5-js', get_template_directory_uri() . '/includes/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js', array('jquery'), 'v5.1.3', true );
 	
 	//$vers=define('THEME_VERSION', $theme->Version);
 	$vers=rand();
